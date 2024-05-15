@@ -1,0 +1,504 @@
+<!--allrecords--><div id="allrecords" data-tilda-export="yes" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="9450431" data-tilda-page-id="48815701" data-tilda-page-alias="dev" data-tilda-formskey="2aa594d575f40509beb5976059450431" data-tilda-cookie="no" data-tilda-lazy="yes" data-tilda-root-zone="pro" ><div id="rec747328471" class="r t-rec" style=" " data-animationappear="off" data-record-type="461" ><!-- T461 --><div id="nav747328471marker"></div><div class="tmenu-mobile" ><div class="tmenu-mobile__container"><div class="tmenu-mobile__text t-name t-name_md" field="menu_mob_title">&nbsp;</div><button type="button" 
+class="t-menuburger t-menuburger_second " 
+aria-label="Навигационное меню" 
+aria-expanded="false"><span style="background-color:#fff;"></span><span style="background-color:#fff;"></span><span style="background-color:#fff;"></span><span style="background-color:#fff;"></span></button><script>function t_menuburger_init(recid) {
+var rec = document.querySelector('#rec' + recid);
+if (!rec) return;
+var burger = rec.querySelector('.t-menuburger');
+if (!burger) return;
+var isSecondStyle = burger.classList.contains('t-menuburger_second');
+if (isSecondStyle && !window.isMobile && !('ontouchend' in document)) {
+burger.addEventListener('mouseenter', function() {
+if (burger.classList.contains('t-menuburger-opened')) return;
+burger.classList.remove('t-menuburger-unhovered');
+burger.classList.add('t-menuburger-hovered');
+});
+burger.addEventListener('mouseleave', function() {
+if (burger.classList.contains('t-menuburger-opened')) return;
+burger.classList.remove('t-menuburger-hovered');
+burger.classList.add('t-menuburger-unhovered');
+setTimeout(function() {
+burger.classList.remove('t-menuburger-unhovered');
+}, 300);
+});
+}
+burger.addEventListener('click', function() {
+if (!burger.closest('.tmenu-mobile') &&
+!burger.closest('.t450__burger_container') &&
+!burger.closest('.t466__container') &&
+!burger.closest('.t204__burger') &&
+!burger.closest('.t199__js__menu-toggler')) {
+burger.classList.toggle('t-menuburger-opened');
+burger.classList.remove('t-menuburger-unhovered');
+}
+});
+var menu = rec.querySelector('[data-menu="yes"]');
+if (!menu) return;
+var menuLinks = menu.querySelectorAll('.t-menu__link-item');
+var submenuClassList = ['t978__menu-link_hook', 't978__tm-link', 't966__tm-link', 't794__tm-link', 't-menusub__target-link'];
+Array.prototype.forEach.call(menuLinks, function (link) {
+link.addEventListener('click', function () {
+var isSubmenuHook = submenuClassList.some(function (submenuClass) {
+return link.classList.contains(submenuClass);
+});
+if (isSubmenuHook) return;
+burger.classList.remove('t-menuburger-opened');
+});
+});
+menu.addEventListener('clickedAnchorInTooltipMenu', function () {
+burger.classList.remove('t-menuburger-opened');
+});
+}
+t_onReady(function() {
+t_onFuncLoad('t_menuburger_init', function(){t_menuburger_init('747328471');});
+});</script><style>.t-menuburger {
+position: relative;
+flex-shrink: 0;
+width: 28px;
+height: 20px;
+padding: 0;
+border: none;
+background-color: transparent;
+outline: none;
+-webkit-transform: rotate(0deg);
+transform: rotate(0deg);
+transition: transform .5s ease-in-out;
+cursor: pointer;
+z-index: 999;
+}
+/*---menu burger lines---*/
+.t-menuburger span {
+display: block;
+position: absolute;
+width: 100%;
+opacity: 1;
+left: 0;
+-webkit-transform: rotate(0deg);
+transform: rotate(0deg);
+transition: .25s ease-in-out;
+height: 3px;
+background-color: #000;
+}
+.t-menuburger span:nth-child(1) {
+top: 0px;
+}
+.t-menuburger span:nth-child(2),
+.t-menuburger span:nth-child(3) {
+top: 8px;
+}
+.t-menuburger span:nth-child(4) {
+top: 16px;
+}
+/*menu burger big*/
+.t-menuburger__big {
+width: 42px;
+height: 32px;
+}
+.t-menuburger__big span {
+height: 5px;
+}
+.t-menuburger__big span:nth-child(2),
+.t-menuburger__big span:nth-child(3) {
+top: 13px;
+}
+.t-menuburger__big span:nth-child(4) {
+top: 26px;
+}
+/*menu burger small*/
+.t-menuburger__small {
+width: 22px;
+height: 14px;
+}
+.t-menuburger__small span {
+height: 2px;
+}
+.t-menuburger__small span:nth-child(2),
+.t-menuburger__small span:nth-child(3) {
+top: 6px;
+}
+.t-menuburger__small span:nth-child(4) {
+top: 12px;
+}
+/*menu burger opened*/
+.t-menuburger-opened span:nth-child(1) {
+top: 8px;
+width: 0%;
+left: 50%;
+}
+.t-menuburger-opened span:nth-child(2) {
+-webkit-transform: rotate(45deg);
+transform: rotate(45deg);
+}
+.t-menuburger-opened span:nth-child(3) {
+-webkit-transform: rotate(-45deg);
+transform: rotate(-45deg);
+}
+.t-menuburger-opened span:nth-child(4) {
+top: 8px;
+width: 0%;
+left: 50%;
+}
+.t-menuburger-opened.t-menuburger__big span:nth-child(1) {
+top: 6px;
+}
+.t-menuburger-opened.t-menuburger__big span:nth-child(4) {
+top: 18px;
+}
+.t-menuburger-opened.t-menuburger__small span:nth-child(1),
+.t-menuburger-opened.t-menuburger__small span:nth-child(4) {
+top: 6px;
+}
+/*---menu burger first style---*/
+@media (hover), (min-width:0\0) {
+.t-menuburger_first:hover span:nth-child(1) {
+transform: translateY(1px);
+}
+.t-menuburger_first:hover span:nth-child(4) {
+transform: translateY(-1px);
+}
+.t-menuburger_first.t-menuburger__big:hover span:nth-child(1) {
+transform: translateY(3px);
+}
+.t-menuburger_first.t-menuburger__big:hover span:nth-child(4) {
+transform: translateY(-3px);
+}
+}
+/*---menu burger second style---*/
+.t-menuburger_second span:nth-child(2),
+.t-menuburger_second span:nth-child(3) {
+width: 80%;
+left: 20%;
+right: 0;
+}
+@media (hover), (min-width:0\0) {
+.t-menuburger_second.t-menuburger-hovered span:nth-child(2),
+.t-menuburger_second.t-menuburger-hovered span:nth-child(3) {
+animation: t-menuburger-anim 0.3s ease-out normal forwards;
+}
+.t-menuburger_second.t-menuburger-unhovered span:nth-child(2),
+.t-menuburger_second.t-menuburger-unhovered span:nth-child(3) {
+animation: t-menuburger-anim2 0.3s ease-out normal forwards;
+}
+}
+.t-menuburger_second.t-menuburger-opened span:nth-child(2),
+.t-menuburger_second.t-menuburger-opened span:nth-child(3){
+left: 0;
+right: 0;
+width: 100%!important;
+}
+/*---menu burger third style---*/
+.t-menuburger_third span:nth-child(4) {
+width: 70%;
+left: unset;
+right: 0;
+}
+@media (hover), (min-width:0\0) {
+.t-menuburger_third:not(.t-menuburger-opened):hover span:nth-child(4) {
+width: 100%;
+}
+}
+.t-menuburger_third.t-menuburger-opened span:nth-child(4) {
+width: 0!important;
+right: 50%;
+}
+/*---menu burger fourth style---*/
+.t-menuburger_fourth {
+height: 12px;
+}
+.t-menuburger_fourth.t-menuburger__small {
+height: 8px;
+}
+.t-menuburger_fourth.t-menuburger__big {
+height: 18px;
+}
+.t-menuburger_fourth span:nth-child(2),
+.t-menuburger_fourth span:nth-child(3) {
+top: 4px;
+opacity: 0;
+}
+.t-menuburger_fourth span:nth-child(4) {
+top: 8px;
+}
+.t-menuburger_fourth.t-menuburger__small span:nth-child(2),
+.t-menuburger_fourth.t-menuburger__small span:nth-child(3) {
+top: 3px;
+}
+.t-menuburger_fourth.t-menuburger__small span:nth-child(4) {
+top: 6px;
+}
+.t-menuburger_fourth.t-menuburger__small span:nth-child(2),
+.t-menuburger_fourth.t-menuburger__small span:nth-child(3) {
+top: 3px;
+}
+.t-menuburger_fourth.t-menuburger__small span:nth-child(4) {
+top: 6px;
+}
+.t-menuburger_fourth.t-menuburger__big span:nth-child(2),
+.t-menuburger_fourth.t-menuburger__big span:nth-child(3) {
+top: 6px;
+}
+.t-menuburger_fourth.t-menuburger__big span:nth-child(4) {
+top: 12px;
+}
+@media (hover), (min-width:0\0) {
+.t-menuburger_fourth:not(.t-menuburger-opened):hover span:nth-child(1) {
+transform: translateY(1px);
+}
+.t-menuburger_fourth:not(.t-menuburger-opened):hover span:nth-child(4) {
+transform: translateY(-1px);
+}
+.t-menuburger_fourth.t-menuburger__big:not(.t-menuburger-opened):hover span:nth-child(1) {
+transform: translateY(3px);
+}
+.t-menuburger_fourth.t-menuburger__big:not(.t-menuburger-opened):hover span:nth-child(4) {
+transform: translateY(-3px);
+}
+}
+.t-menuburger_fourth.t-menuburger-opened span:nth-child(1),
+.t-menuburger_fourth.t-menuburger-opened span:nth-child(4) {
+top: 4px;
+}
+.t-menuburger_fourth.t-menuburger-opened span:nth-child(2),
+.t-menuburger_fourth.t-menuburger-opened span:nth-child(3) {
+opacity: 1;
+}
+/*---menu burger animations---*/
+@keyframes t-menuburger-anim {
+0% {
+width: 80%;
+left: 20%;
+right: 0;
+}
+50% {
+width: 100%;
+left: 0;
+right: 0;
+}
+100% {
+width: 80%;
+left: 0;
+right: 20%;
+}
+}
+@keyframes t-menuburger-anim2 {
+0% {
+width: 80%;
+left: 0;
+}
+50% {
+width: 100%;
+right: 0;
+left: 0;
+}
+100% {
+width: 80%;
+left: 20%;
+right: 0;
+}
+}</style> </div></div><style>.tmenu-mobile {
+background-color: #111;
+display: none;
+width: 100%;
+top: 0;
+z-index: 990;
+}
+.tmenu-mobile_positionfixed {
+position: fixed;
+}
+.tmenu-mobile__text {
+color: #fff;
+}
+.tmenu-mobile__container {
+min-height: 64px;
+padding: 20px;
+position: relative;
+box-sizing: border-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+-webkit-align-items: center;
+-ms-flex-align: center;
+align-items: center;
+-webkit-justify-content: space-between;
+-ms-flex-pack: justify;
+justify-content: space-between;
+}
+.tmenu-mobile__list {
+display: block;
+}
+.tmenu-mobile__burgerlogo {
+display: inline-block;
+font-size: 24px;
+font-weight: 400;
+white-space: nowrap;
+vertical-align: middle;
+}
+.tmenu-mobile__imglogo {
+height: auto;
+display: block;
+max-width: 300px!important;
+box-sizing: border-box;
+padding: 0;
+margin: 0 auto;
+}
+@media screen and (max-width: 980px) {
+.tmenu-mobile__menucontent_hidden {
+display: none;
+height: 100%;
+}
+.tmenu-mobile {
+display: block;
+}
+}
+@media screen and (max-width: 980px) {
+#rec747328471 .t-menuburger {
+-webkit-order: 1;
+-ms-flex-order: 1;
+order: 1;
+}
+}</style><style> #rec747328471 .tmenu-mobile__burgerlogo a { color: #ffffff; }</style><style> #rec747328471 .tmenu-mobile__burgerlogo__title { color: #ffffff; }</style><div id="nav747328471" class="t461 t461__positionstatic tmenu-mobile__menucontent_hidden" style="background-color: rgba(0,0,0,1); " data-bgcolor-hex="#000000" data-bgcolor-rgba="rgba(0,0,0,1)" data-navmarker="nav747328471marker" data-appearoffset="" data-bgopacity-two="80" data-menushadow="" data-menushadow-css="0px 10px 20px rgba(0,11,48,0.25)" data-bgopacity="1" data-bgcolor-rgba-afterscroll="rgba(0,0,0,0.80)" data-menu-items-align="center" data-menu="yes"><div class="t461__maincontainer "><div class="t461__topwrapper" style="height:100px;"><div class="t461__logowrapper"><div class="t461__logowrapper2"><div style="display: block;"><a href="/" ><img class="t461__imglogo t461__imglogomobile" 
+src="images/tild3131-3262-4030-a235-633232623439__white_-ogo.png" 
+imgfield="img" 
+style="max-width: 100px; width: 100px;"
+alt="NEIROSET.KZ"
+></a></div></div></div><nav class="t461__listwrapper t461__mobilelist"><ul role="list" class="t461__list"><li class="t461__list_item" 
+style="padding:0 15px 0 0;"><a class="t-menu__link-item" 
+href="/main" data-menu-submenu-hook="" data-menu-item-number="1"
+>ГЛАВНАЯ</a></li><li class="t461__list_item" 
+style="padding:0 15px;"><a class="t-menu__link-item" 
+href="#submenu:about" data-menu-submenu-hook="" data-menu-item-number="2"
+>УСЛУГИ</a></li><li class="t461__list_item" 
+style="padding:0 15px;"><a class="t-menu__link-item" 
+href="/projects" data-menu-submenu-hook="" data-menu-item-number="3"
+>ПРОЕКТЫ</a></li><li class="t461__list_item" 
+style="padding:0 0 0 15px;"><a class="t-menu__link-item" 
+href="/contacts" data-menu-submenu-hook="" data-menu-item-number="4"
+>КОНТАКТЫ</a></li></ul></nav><div class="t461__alladditional"><div class="t461__leftwrapper" style=" padding-right:100px;"><div class="t461__additionalwrapper"><div class="t-sociallinks"><ul role="list" class="t-sociallinks__wrapper" aria-label="Соц. сети"><!-- new soclinks --><li class="t-sociallinks__item t-sociallinks__item_whatsapp"><a target="_blank" rel="nofollow" aria-label="whatsapp" style="width: 25px; height: 25px;"><svg class="t-sociallinks__svg" role="presentation" width=25px height=25px viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M50.168 10C60.8239 10.004 70.8257 14.1522 78.346 21.6819C85.8676 29.2114 90.0066 39.2185 90 49.8636C89.9906 71.8252 72.1203 89.6956 50.1668 89.6956H50.1508C43.4852 89.6929 36.9338 88.0208 31.1162 84.8468L10 90.3853L15.6516 69.7437C12.1665 63.7042 10.3323 56.851 10.3349 49.8304C10.343 27.8676 28.2134 10 50.168 10V10ZM61.5376 54.7631C62.4507 55.0954 67.3433 57.5023 68.3389 58.0009C68.5313 58.0971 68.7113 58.1842 68.8784 58.265C69.5753 58.602 70.0458 58.8296 70.2462 59.1651C70.4947 59.5799 70.4947 61.5736 69.6654 63.8982C68.8359 66.2229 64.8605 68.3442 62.9478 68.63C61.2319 68.8865 59.0627 68.9928 56.6782 68.2353C55.2322 67.7767 53.3794 67.1653 51.0041 66.1392C41.6698 62.1082 35.3628 53.06 34.1747 51.3556C34.0919 51.2368 34.0341 51.1538 34.0017 51.1106L33.9981 51.1056C33.486 50.4243 29.9372 45.7022 29.9372 40.8149C29.9372 36.2325 32.1873 33.8303 33.2244 32.7232C33.2961 32.6467 33.3619 32.5763 33.4208 32.5118C34.3341 31.5149 35.412 31.2664 36.0751 31.2664C36.7385 31.2664 37.4029 31.2717 37.9826 31.301C38.0541 31.3046 38.1286 31.304 38.2056 31.3037C38.786 31.3001 39.5087 31.2957 40.2221 33.0089C40.4976 33.6707 40.9012 34.653 41.3265 35.6882C42.1818 37.7702 43.1251 40.066 43.2912 40.399C43.5397 40.8974 43.7058 41.4782 43.3736 42.1427C43.323 42.2436 43.2763 42.3387 43.2318 42.4295C42.9831 42.9364 42.7995 43.3104 42.378 43.8029C42.2125 43.9963 42.0413 44.2045 41.8703 44.4131C41.5273 44.8309 41.1842 45.2488 40.8853 45.5467C40.387 46.0425 39.8686 46.5808 40.4493 47.5777C41.0303 48.5731 43.028 51.8323 45.9867 54.472C49.1661 57.3091 51.93 58.5078 53.3318 59.1157C53.6058 59.2346 53.8279 59.3308 53.9907 59.4124C54.9849 59.9109 55.5658 59.8284 56.1465 59.1637C56.7274 58.4993 58.6347 56.2583 59.298 55.2615C59.9612 54.2646 60.6259 54.4307 61.5376 54.7631V54.7631Z" fill="#ffffff"/></svg></a></li>&nbsp;<li class="t-sociallinks__item t-sociallinks__item_telegram"><a target="_blank" rel="nofollow" aria-label="telegram" style="width: 25px; height: 25px;"><svg class="t-sociallinks__svg" role="presentation" width=25px height=25px viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M83.1797 17.5886C83.1797 17.5886 90.5802 14.7028 89.9635 21.711C89.758 24.5968 87.9079 34.6968 86.4688 45.6214L81.5351 77.9827C81.5351 77.9827 81.124 82.7235 77.4237 83.548C73.7233 84.3724 68.173 80.6623 67.145 79.8378C66.3227 79.2195 51.7273 69.9438 46.5878 65.4092C45.1488 64.1724 43.5042 61.6989 46.7934 58.8132L68.3785 38.201C70.8454 35.7274 73.3122 29.956 63.0336 36.9642L34.2535 56.5459C34.2535 56.5459 30.9644 58.6071 24.7973 56.752L11.4351 52.6295C11.4351 52.6295 6.50135 49.5377 14.9298 46.4457C35.4871 36.7579 60.7724 26.864 83.1797 17.5886Z" fill="#ffffff"/></svg></a></li>&nbsp;<li class="t-sociallinks__item t-sociallinks__item_email"><a target="_blank" rel="nofollow" aria-label="Электронная почта" style="width: 25px; height: 25px;"><svg class="t-sociallinks__svg" role="presentation" width=25px height=25px viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M84.6275 27.4266L52.5185 49.7063C50.6833 50.9797 48.2451 50.9592 46.4316 49.6552L15.2876 27.2617C16.3799 25.8838 18.0684 25 19.9633 25H79.8257C81.7951 25 83.5416 25.9547 84.6275 27.4266ZM85.789 31.6456V69.0367C85.789 72.3301 83.1191 75 79.8257 75H19.9633C16.6699 75 14 72.3301 14 69.0367V31.4207L44.0214 53.0071C47.2543 55.3316 51.6007 55.3681 54.872 53.0982L85.789 31.6456Z" fill="#ffffff"/></svg></a></li><!-- /new soclinks --></ul></div></div></div><div class="t461__rightwrapper" style=" padding-left:100px;"><div class="t461__additionalwrapper"><div class="t461__additional_descr t461__additionalitem">neiroset.kz@mail.com</div><div class="t461__additional_buttons t461__additionalitem"><div class="t461__additional_buttons_wrap"><div class="t461__additional_buttons_but"><a href="" target="" class="t-btn t-btn_md " style="color:#1c1c1c;background-color:#ffffff;border-radius:20px; -moz-border-radius:20px; -webkit-border-radius:20px;" data-buttonfieldset="button"
+><table role="presentation" style="width:100%; height:100%;"><tr><td>СВЯЗАТЬСЯ СЕЙЧАС</td></tr></table></a></div></div></div></div></div></div></div><div class="t461__middlelinewrapper"><div class="t461__linewrapper"><hr class="t461__horizontalline" style=" background-color:#ffffff; opacity:0.7;"></div></div><div class="t461__bottomwrapper t461__menualign_center" style=" height:60px;"><nav class="t461__listwrapper t461__desktoplist"><ul role="list" class="t461__list t-menu__list"><li class="t461__list_item" 
+style="padding:0 15px 0 0;"><a class="t-menu__link-item" 
+href="/main" data-menu-submenu-hook="" data-menu-item-number="1"
+>ГЛАВНАЯ</a></li><li class="t461__list_item" 
+style="padding:0 15px;"><a class="t-menu__link-item" 
+href="#submenu:about" data-menu-submenu-hook="" data-menu-item-number="2"
+>УСЛУГИ</a></li><li class="t461__list_item" 
+style="padding:0 15px;"><a class="t-menu__link-item" 
+href="/projects" data-menu-submenu-hook="" data-menu-item-number="3"
+>ПРОЕКТЫ</a></li><li class="t461__list_item" 
+style="padding:0 0 0 15px;"><a class="t-menu__link-item" 
+href="/contacts" data-menu-submenu-hook="" data-menu-item-number="4"
+>КОНТАКТЫ</a></li></ul></nav></div></div></div><style>@media screen and (max-width: 980px) {
+#rec747328471 .t461__leftcontainer{
+padding: 20px;
+}
+}
+@media screen and (max-width: 980px) {
+#rec747328471 .t461__imglogo{
+padding: 20px 0;
+}
+}</style><script>t_onReady(function() {
+t_onFuncLoad('t_menu__highlightActiveLinks', function () {
+t_menu__highlightActiveLinks('.t461__desktoplist .t461__list_item a');
+});
+});
+t_onFuncLoad('t_menu__setBGcolor', function () {
+window.addEventListener('resize', t_throttle(function () {
+t_menu__setBGcolor('747328471', '.t461');
+}));
+});
+t_onReady(function () {
+t_onFuncLoad('t_menu__setBGcolor', function () {
+t_menu__setBGcolor('747328471', '.t461');
+});
+t_onFuncLoad('t_menu__interactFromKeyboard', function () {
+t_menu__interactFromKeyboard('747328471');
+});
+});</script><script>t_onReady(function () {
+var rec = document.querySelector('#rec747328471');
+if (!rec) return;
+var wrapperBlock = rec.querySelector('.t461');
+if (!wrapperBlock) return;
+t_onFuncLoad('t_menu__createMobileMenu', function () {
+t_menu__createMobileMenu('747328471', '.t461');
+});
+});</script><style>#rec747328471 .t-menu__link-item{
+}
+@supports (overflow:-webkit-marquee) and (justify-content:inherit)
+{
+#rec747328471 .t-menu__link-item,
+#rec747328471 .t-menu__link-item.t-active {
+opacity: 1 !important;
+}
+}</style><style> #rec747328471 a.t-menusub__link-item { color: #000000; }</style><style> #rec747328471 .t461__logowrapper2 a { color: #ffffff; } #rec747328471 a.t-menu__link-item { color: #ffffff; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; } #rec747328471 .t461__additional_descr { color: #ffffff; } #rec747328471 .t461__additional_langs_lang a { color: #ffffff; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }</style><style> #rec747328471 .t461__logo { color: #ffffff; }</style><!--[if IE 8]><style>#rec747328471 .t461 {
+filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#D9000000', endColorstr='#D9000000');
+}</style><![endif]--><style>#rec747328471 .t461 {box-shadow: 0px 10px 20px rgba(0,11,48,0.25);}</style></div><div id="rec747328547" class="r t-rec" style=" " data-animationappear="off" data-record-type="966" ><!-- T966 --><div class="t966" data-tooltip-hook="#submenu:about" data-tooltip-margin="" data-add-arrow="on" ><div class="t966__tooltip-menu" data-style-from-rec="747328547"><div class="t966__tooltip-menu-corner" ></div><div class="t966__content"><div class="t966__menu-list" role="menu" aria-label=""><div class="t966__menu-item-wrapper t-submenublocks__item"><a class="t966__menu-link" 
+href="/dev"
+role="menuitem" 
+style="display:block;" data-menu-item-number="1"><div class="t966__menu-item"><div class="t966__menu-item-icon-wrapper"><div class="t966__menu-item-icon t-bgimg" bgimgfield="li_img__9752831678355" data-original="images/lib__tildaicon__63666639-6537-4635-a362-393836313731__tilda_icons_32_profession_itman.svg" style="background-image: url('images/lib__tildaicon__63666639-6537-4635-a362-393836313731__tilda_icons_32_profession_itman.svg');"></div></div><div class="t966__menu-item-text"><div class="t966__menu-item-title t966__typo__menu_747328547 t-name" style="" field="li_title__9752831678355">Разработка</div><div class="t966__menu-item-desc t966__typo__subtitle_747328547 t-descr" style="" field="li_descr__9752831678355">Разработка нейро-сотрудников и решений по Computer Vision</div></div></div></a></div><div class="t966__menu-item-wrapper t-submenublocks__item"><a class="t966__menu-link" 
+href="/training"
+role="menuitem" 
+style="display:block;" data-menu-item-number="2"><div class="t966__menu-item"><div class="t966__menu-item-icon-wrapper"><div class="t966__menu-item-icon t-bgimg" bgimgfield="li_img__9752831678356" data-original="images/lib__tildaicon__39316237-3031-4265-a339-663861353439__18ked_psychology.svg" style="background-image: url('images/lib__tildaicon__39316237-3031-4265-a339-663861353439__18ked_psychology.svg');"></div></div><div class="t966__menu-item-text"><div class="t966__menu-item-title t966__typo__menu_747328547 t-name" style="" field="li_title__9752831678356">Обучение</div><div class="t966__menu-item-desc t966__typo__subtitle_747328547 t-descr" style="" field="li_descr__9752831678356">Обучение и развитие навыков в области нейросетей и Computer Vision</div></div></div></a></div></div></div></div></div><script>t_onReady(function() {
+t_onFuncLoad('t966_divideMenu', function(){
+t966_divideMenu('747328547', '2');
+});
+});</script><script>t_onReady(function() {
+t_onFuncLoad('t966_init', function() {
+t966_init('747328547');
+});
+});</script><style>#rec747328547 .t966__content {
+background-color: #fff;
+}
+#rec747328547 .t966__tooltip-menu-corner {
+background-color: #fff;
+top: -6.5px;
+border-color: #eee;
+border-width: 0;
+border-style: none;
+}
+#rec747328547 .t966__tooltip-menu {
+max-width:600px;
+}</style><style></style></div><div id="rec747328478" class="r t-rec" style=" " data-animationappear="off" data-record-type="396" ><!-- T396 --><style>#rec747328478 .t396__artboard {min-height: 550px;height: 100vh; background-color: #ffffff; }#rec747328478 .t396__filter {min-height: 550px;height: 100vh; background-image: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.5)) );background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5));background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5));will-change: transform;}#rec747328478 .t396__carrier{min-height: 550px;height: 100vh;background-position: center center;background-attachment: scroll;background-image: url('images/tild3936-6438-4431-a566-336533363366__-__resize__20x__neirogirl.png');background-size: cover;background-repeat: no-repeat;}@media screen and (max-width: 1199px) {#rec747328478 .t396__artboard,#rec747328478 .t396__filter,#rec747328478 .t396__carrier {}#rec747328478 .t396__filter {}#rec747328478 .t396__carrier {background-attachment: scroll;}}@media screen and (max-width: 959px) {#rec747328478 .t396__artboard,#rec747328478 .t396__filter,#rec747328478 .t396__carrier {}#rec747328478 .t396__filter {}#rec747328478 .t396__carrier {background-attachment: scroll;}}@media screen and (max-width: 639px) {#rec747328478 .t396__artboard,#rec747328478 .t396__filter,#rec747328478 .t396__carrier {}#rec747328478 .t396__filter {}#rec747328478 .t396__carrier {background-attachment: scroll;}}@media screen and (max-width: 479px) {#rec747328478 .t396__artboard,#rec747328478 .t396__filter,#rec747328478 .t396__carrier {}#rec747328478 .t396__filter {}#rec747328478 .t396__carrier {background-position: 68.865% 45.200%;background-attachment: scroll;}} #rec747328478 .tn-elem[data-elem-id="1470209944682"] { color: #ffffff; z-index: 2; top: calc(50vh - 0px + -137px);left: calc(50% - 319.5px + -260px);width: 639px;}#rec747328478 .tn-elem[data-elem-id="1470209944682"] .tn-atom { color: #ffffff; font-size: 36px; font-family: 'Montserrat',Arial,sans-serif; line-height: 1.25; font-weight: 400; background-position: center center;border-color: transparent ;border-style: solid ; }@media screen and (max-width: 1199px) {#rec747328478 .tn-elem[data-elem-id="1470209944682"] {top: calc(275px - 0px + -23px);left: calc(50% - 319.5px + 0px);width: 940px;}#rec747328478 .tn-elem[data-elem-id="1470209944682"] .tn-atom { font-size: 32px; }}@media screen and (max-width: 959px) {#rec747328478 .tn-elem[data-elem-id="1470209944682"] {top: calc(275px - 0px + -32px);left: calc(50% - 319.5px + 0px);width: 580px;}}@media screen and (max-width: 639px) {#rec747328478 .tn-elem[data-elem-id="1470209944682"] {top: calc(275px - 0px + 5px);left: calc(50% - 319.5px + -112px);width: 221px;}#rec747328478 .tn-elem[data-elem-id="1470209944682"] .tn-atom { font-size: 28px; line-height: 1.2; }}@media screen and (max-width: 479px) {#rec747328478 .tn-elem[data-elem-id="1470209944682"] {top: calc(275px - 0px + -72px);left: calc(50% - 319.5px + 12px);width: 297px;}#rec747328478 .tn-elem[data-elem-id="1470209944682"] .tn-atom { font-size: 21px; }} #rec747328478 .tn-elem[data-elem-id="1470210011265"] { color: #ffffff; text-align: center; z-index: 3; top: calc(50vh - 0px + 73px);left: calc(50% - 230px + 0px);width: 460px;}#rec747328478 .tn-elem[data-elem-id="1470210011265"] .tn-atom { color: #ffffff; font-size: 16px; font-family: 'Arial',Arial,sans-serif; line-height: 1.5; font-weight: 400; letter-spacing: 0.5px; background-position: center center;border-color: transparent ;border-style: solid ; }@media screen and (max-width: 1199px) {#rec747328478 .tn-elem[data-elem-id="1470210011265"] {top: calc(275px - 0px + 68px);left: calc(50% - 230px + 0px);width: 420px;}#rec747328478 .tn-elem[data-elem-id="1470210011265"] .tn-atom { font-size: 14px; line-height: 1.55; }}@media screen and (max-width: 959px) {#rec747328478 .tn-elem[data-elem-id="1470210011265"] {top: calc(275px - 0px + 98px);left: calc(50% - 230px + 0px);width: 420px;}#rec747328478 .tn-elem[data-elem-id="1470210011265"] .tn-atom { letter-spacing: 0.5px; }}@media screen and (max-width: 639px) {#rec747328478 .tn-elem[data-elem-id="1470210011265"] {top: calc(275px - 0px + 95px);left: calc(50% - 230px + 0px);width: 410px;}#rec747328478 .tn-elem[data-elem-id="1470210011265"] .tn-atom { font-size: 12px; }}@media screen and (max-width: 479px) {#rec747328478 .tn-elem[data-elem-id="1470210011265"] {top: calc(275px - 0px + 129px);left: calc(50% - 230px + 0px);width: 300px;}} #rec747328478 .tn-elem[data-elem-id="1473773480425"] { color: #ffffff; text-align: center; z-index: 4; top: calc(50vh - 0px + -272px);left: calc(50% - 580px + -344px);width: 1160px;}#rec747328478 .tn-elem[data-elem-id="1473773480425"] .tn-atom { color: #ffffff; font-size: 68px; font-family: 'Montserrat',Arial,sans-serif; line-height: 1.55; font-weight: 100; letter-spacing: 2.5px; opacity: 0.75; background-position: center center;border-color: transparent ;border-style: solid ; }@media screen and (max-width: 1199px) {#rec747328478 .tn-elem[data-elem-id="1473773480425"] {top: calc(275px - 0px + -248px);left: calc(50% - 580px + -240px);width: 940px;}}@media screen and (max-width: 959px) {#rec747328478 .tn-elem[data-elem-id="1473773480425"] {top: calc(275px - 0px + -166.5px);left: calc(50% - 580px + 0px);width: 620px;}}@media screen and (max-width: 639px) {#rec747328478 .tn-elem[data-elem-id="1473773480425"] {top: calc(275px - 0px + -224px);left: calc(50% - 580px + -10px);width: 460px;}#rec747328478 .tn-elem[data-elem-id="1473773480425"] .tn-atom { font-size: 65px; }}@media screen and (max-width: 479px) {#rec747328478 .tn-elem[data-elem-id="1473773480425"] {top: calc(275px - 0px + -150px);left: calc(50% - 580px + -10px);width: 300px;}#rec747328478 .tn-elem[data-elem-id="1473773480425"] .tn-atom { font-size: 38px; }} #rec747328478 .tn-elem[data-elem-id="1715567914774"] { color: #00022f; text-align: center; z-index: 5; top: calc(50vh - 275px + 223px);left: calc(50% - 600px + 21px);width: 200px;height:47px;}#rec747328478 .tn-elem[data-elem-id="1715567914774"] .tn-atom { color: #00022f; font-size: 14px; font-family: 'Montserrat',Arial,sans-serif; line-height: 1.55; font-weight: 600; border-radius: 3px; background-color: #ffffff; background-position: center center;border-color: transparent ;border-style: solid ; transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out; }@media screen and (max-width: 1199px) {#rec747328478 .tn-elem[data-elem-id="1715567914774"] {top: 452px;left: calc(50% - 480px + 10px);}}@media screen and (max-width: 959px) {#rec747328478 .tn-elem[data-elem-id="1715567914774"] {top: 392px;left: calc(50% - 320px + 30px);}}@media screen and (max-width: 639px) {#rec747328478 .tn-elem[data-elem-id="1715567914774"] {top: 414px;left: calc(50% - 240px + 10px);}}@media screen and (max-width: 479px) {#rec747328478 .tn-elem[data-elem-id="1715567914774"] {top: 344px;left: calc(50% - 160px + 70px);width: 162px;height: 40px;border-radius: 0px;}#rec747328478 .tn-elem[data-elem-id="1715567914774"] .tn-atom { font-size: 10px; border-radius: 0px;}} #rec747328478 .tn-elem[data-elem-id="1715567920935"] { color: #000671; text-align: center; z-index: 6; top: calc(50vh - 275px + 223px);left: calc(50% - 600px + 300px);width: 200px;height:47px;}#rec747328478 .tn-elem[data-elem-id="1715567920935"] .tn-atom { color: #000671; font-size: 14px; font-family: 'Montserrat',Arial,sans-serif; line-height: 1.55; font-weight: 600; border-radius: 3px; background-color: #fbfbfb; background-position: center center;border-color: transparent ;border-style: solid ; transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out; }@media screen and (max-width: 1199px) {#rec747328478 .tn-elem[data-elem-id="1715567920935"] {top: 452px;left: calc(50% - 480px + 289px);}}@media screen and (max-width: 959px) {#rec747328478 .tn-elem[data-elem-id="1715567920935"] {top: 393px;left: calc(50% - 320px + 410px);}}@media screen and (max-width: 639px) {#rec747328478 .tn-elem[data-elem-id="1715567920935"] {top: 416px;left: calc(50% - 240px + 270px);}}@media screen and (max-width: 479px) {#rec747328478 .tn-elem[data-elem-id="1715567920935"] {top: 271px;left: calc(50% - 160px + 70px);width: 160px;height: 40px;border-radius: 0px;}#rec747328478 .tn-elem[data-elem-id="1715567920935"] {text-align: center;}#rec747328478 .tn-elem[data-elem-id="1715567920935"] .tn-atom { font-size: 10px; line-height: 1.5; background-color: #ffffff; border-radius: 0px;}}</style><div class='t396'><div class="t396__artboard" data-artboard-recid="747328478" data-artboard-screens="320,480,640,960,1200" data-artboard-height="550" data-artboard-valign="center" data-artboard-height_vh="100" data-artboard-upscale="grid" 
+><div class="t396__carrier t-bgimg" data-artboard-recid="747328478" data-original="images/tild3936-6438-4431-a566-336533363366__neirogirl.png"></div><div class="t396__filter" data-artboard-recid="747328478"></div><div class='t396__elem tn-elem tn-elem__7473284781470209944682' data-elem-id='1470209944682' data-elem-type='text' data-field-top-value="-137" data-field-left-value="-260" data-field-width-value="639" data-field-axisy-value="center" data-field-axisx-value="center" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="" data-field-widthunits-value="px" data-field-top-res-320-value="-72" data-field-left-res-320-value="12" data-field-width-res-320-value="297" data-field-top-res-480-value="5" data-field-left-res-480-value="-112" data-field-width-res-480-value="221" data-field-top-res-640-value="-32" data-field-left-res-640-value="0" data-field-width-res-640-value="580" data-field-top-res-960-value="-23" data-field-left-res-960-value="0" data-field-width-res-960-value="940" 
+><div class='tn-atom'field='tn_text_1470209944682'>|</div> </div><div class='t396__elem tn-elem tn-elem__7473284781470210011265' data-elem-id='1470210011265' data-elem-type='text' data-field-top-value="73" data-field-left-value="0" data-field-width-value="460" data-field-axisy-value="center" data-field-axisx-value="center" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="" data-field-widthunits-value="px" data-field-top-res-320-value="129" data-field-left-res-320-value="0" data-field-width-res-320-value="300" data-field-top-res-480-value="95" data-field-left-res-480-value="0" data-field-width-res-480-value="410" data-field-top-res-640-value="98" data-field-left-res-640-value="0" data-field-width-res-640-value="420" data-field-top-res-960-value="68" data-field-left-res-960-value="0" data-field-width-res-960-value="420" 
+><div class='tn-atom'field='tn_text_1470210011265'></div> </div><div class='t396__elem tn-elem tn-elem__7473284781473773480425' data-elem-id='1473773480425' data-elem-type='text' data-field-top-value="-272" data-field-left-value="-344" data-field-width-value="1160" data-field-axisy-value="center" data-field-axisx-value="center" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="" data-field-widthunits-value="px" data-field-top-res-320-value="-150" data-field-left-res-320-value="-10" data-field-width-res-320-value="300" data-field-top-res-480-value="-224" data-field-left-res-480-value="-10" data-field-width-res-480-value="460" data-field-top-res-640-value="-166.5" data-field-left-res-640-value="0" data-field-width-res-640-value="620" data-field-top-res-960-value="-248" data-field-left-res-960-value="-240" data-field-width-res-960-value="940" 
+><div class='tn-atom'field='tn_text_1473773480425'>NEIROSET.KZ</div> </div><div class='t396__elem tn-elem tn-elem__7473284781715567914774' data-elem-id='1715567914774' data-elem-type='button' data-field-top-value="223" data-field-left-value="21" data-field-height-value="47" data-field-width-value="200" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-top-res-320-value="344" data-field-left-res-320-value="70" data-field-height-res-320-value="40" data-field-width-res-320-value="162" data-field-top-res-480-value="414" data-field-left-res-480-value="10" data-field-top-res-640-value="392" data-field-left-res-640-value="30" data-field-top-res-960-value="452" data-field-left-res-960-value="10" 
+><a class='tn-atom' href="#rec747330525" >Разработка нейро-сотрудников</a></div><div class='t396__elem tn-elem tn-elem__7473284781715567920935' data-elem-id='1715567920935' data-elem-type='button' data-field-top-value="223" data-field-left-value="300" data-field-height-value="47" data-field-width-value="200" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-top-res-320-value="271" data-field-left-res-320-value="70" data-field-height-res-320-value="40" data-field-width-res-320-value="160" data-field-top-res-480-value="416" data-field-left-res-480-value="270" data-field-top-res-640-value="393" data-field-left-res-640-value="410" data-field-top-res-960-value="452" data-field-left-res-960-value="289" 
+><a class='tn-atom' href="#rec747344000" >Разработка Computer Vision</a></div></div> </div> <script>t_onReady(function () {
+t_onFuncLoad('t396_init', function () {
+t396_init('747328478');
+});
+});</script><!-- /T396 --></div><div id="rec747330525" class="r t-rec t-rec_pt_30 t-rec_pb_30" style="padding-top:30px;padding-bottom:30px;background-color:#ebebeb; " data-record-type="485" data-bg-color="#ebebeb"><!-- t485 --><div class="t485"><div class="t-container t-align_center"><div class="t-col t-col_8 t-prefix_2"><div class="t485__uptitle t-uptitle t-uptitle_md t-margin_auto" field="subtitle">Разработка нейросотрудников</div><img class="t485__img t-img t-margin_auto" 
+src="images/tild3035-3864-4862-b461-336266346436__-__empty__neirodev.jpg" data-original="images/tild3035-3864-4862-b461-336266346436__neirodev.jpg"
+imgfield="img" 
+style=""
+alt=""><div class="t485__descr t-descr t-descr_md t-margin_auto" field="descr">Neiroset.kz предлагает инновационные решения в области разработки нейро-сотрудников — интеллектуальных систем, способных заменить человека в ряде задач или дополнить его усилия, повышая общую производительность и эффективность работы.</div></div></div></div><style> #rec747330525 .t485__uptitle { text-transform: uppercase; }</style></div><div id="rec747341790" class="r t-rec t-rec_pt_45 t-rec_pb_0" style="padding-top:45px;padding-bottom:0px; " data-record-type="577" ><!-- t577 --><div class="t577"><div class="t-section__container t-container"><div class="t-col t-col_12"><div class="t-section__topwrapper t-align_center"><div class="t-section__title t-title t-title_xs" field="btitle"><div style="font-size: 26px;" data-customstyle="yes"><span style="font-weight: 300; font-family: Montserrat;">Наши нейро-сотрудники — это результат применения передовых технологий машинного обучения и искусственного интеллекта, которые способны анализировать большие объемы данных, принимать решения и выполнять монотонные или сложные задачи, требующие повышенной точности. Это включает в себя:</span></div></div> </div></div></div><div class="t-container"><div class="t577__row"><div class="t-item t577__col t-col t-col_4 " ><div class="t577__circle" style=" "><div class="t577__number t-name t-name_md" style="">1</div></div><div class="t577__content"><div class="t577__textwrapper t-align_center" style=" border: 1px solid #e0e0e0; "><div class="t577__title t-name t-name_md" field="li_title__1479137044697"><strong>Автоматизацию административных задач</strong></div><div class="t577__descr t-text t-text_xs" field="li_descr__1479137044697">Обработку запросов, управление данными и поддержку клиентов.</div><img class="t577__img t-img" 
+src="images/lib__tildaicon__61633238-3164-4565-a161-616161393462__tilda_icons_39_it_structure.svg" 
+imgfield="li_img__1479137044697"
+alt=""></div></div></div><div class="t-item t577__col t-col t-col_4 " ><div class="t577__circle" style=" "><div class="t577__number t-name t-name_md" style="">2</div></div><div class="t577__content"><div class="t577__textwrapper t-align_center" style=" border: 1px solid #e0e0e0; "><div class="t577__title t-name t-name_md" field="li_title__1479137356907"><strong>Обработку и анализ данных</strong></div><div class="t577__descr t-text t-text_xs" field="li_descr__1479137356907">Распознавание образов, классификацию и предиктивный анализ</div><img class="t577__img t-img" 
+src="images/lib__tildaicon__32653738-6538-4137-a635-653037616464__tilda_icons_39_it_research.svg" 
+imgfield="li_img__1479137356907"
+alt=""></div></div></div><div class="t-item t577__col t-col t-col_4 " ><div class="t577__circle" style=" "><div class="t577__number t-name t-name_md" style="">3</div></div><div class="t577__content"><div class="t577__textwrapper t-align_center" style=" border: 1px solid #e0e0e0; "><div class="t577__title t-name t-name_md" field="li_title__1479137790652"><strong>Интерактивные сервисы</strong></div><div class="t577__descr t-text t-text_xs" field="li_descr__1479137790652">Разработка чат-ботов и виртуальных ассистентов, которые могут общаться с пользователями, отвечать на вопросы и предоставлять рекомендации</div><img class="t577__img t-img" 
+src="images/lib__tildaicon__36396630-6563-4264-a265-653037326161__tilda_icons_39_it_adaptive.svg" 
+imgfield="li_img__1479137790652"
+alt=""></div></div></div></div></div></div></div><div id="rec747342576" class="r t-rec t-rec_pt_0 t-rec_pb_60" style="padding-top:0px;padding-bottom:60px; " data-record-type="106" ><!-- T004 --><div class="t004"><div class="t-container "><div class="t-col t-col_8 t-prefix_2"><div field="text" class="t-text t-text_md ">Мы стремимся создавать решения, которые не только улучшают производительность, но и освобождают человеческие ресурсы для более творческих и стратегически важных задач, тем самым улучшая рабочую среду и повышая удовлетворенность персонала.</div></div></div></div></div><div id="rec747342270" class="r t-rec" style=" " data-animationappear="off" data-record-type="635" ><!-- t635 --><div class="t635__textholder" data-recid="747328478" data-text1="Разработка нейро-сотрудников и решений по Computer Vision" data-backspacing-delay="1000" data-loop="false"></div><script>t_onReady(function() {
+t_onFuncLoad('t635_init', function() {
+t635_init('747342270', '#ffffff', '#ffffff');
+});
+});</script></div><div id="rec747344000" class="r t-rec t-rec_pt_30 t-rec_pb_30" style="padding-top:30px;padding-bottom:30px;background-color:#ebebeb; " data-record-type="485" data-bg-color="#ebebeb"><!-- t485 --><div class="t485"><div class="t-container t-align_center"><div class="t-col t-col_8 t-prefix_2"><div class="t485__uptitle t-uptitle t-uptitle_md t-margin_auto" field="subtitle">Разработка Computer vision</div><img class="t485__img t-img t-margin_auto" 
+src="images/tild6561-3235-4430-a236-666364353164__-__empty__computer-vision-exam.png" data-original="images/tild6561-3235-4430-a236-666364353164__computer-vision-exam.png"
+imgfield="img" 
+style=""
+alt=""><div class="t485__descr t-descr t-descr_md t-margin_auto" field="descr"><span style="font-family: Montserrat;">В Neiroset.kz мы разрабатываем передовые решения в области компьютерного зрения, которые позволяют машинам воспринимать и интерпретировать визуальный мир на уровне человека или даже превосходить его</span></div></div></div></div><style> #rec747344000 .t485__uptitle { text-transform: uppercase; }</style></div><div id="rec747344545" class="r t-rec t-rec_pt_135 t-rec_pb_135" style="padding-top:135px;padding-bottom:135px; " data-animationappear="off" data-record-type="1000" ><!-- t1000 --><div class="t1000"><div class="t1000__wrapper t-container t-container_flex"><div class="t1000__content"><div class="t1000__bg-wrap"><div class="t1000__background-image t-bgimg" data-original="images/tild6463-3230-4134-a639-386635623431__0_qr5iotinrgvfc8rb.jpg" 
+bgimgfield="img5"
+style="visibility: hidden;background-image: url('images/tild6463-3230-4134-a639-386635623431__-__resizeb__20x__0_qr5iotinrgvfc8rb.jpg'); top: -135px; bottom: -135px; "
+itemscope itemtype="http://schema.org/ImageObject"><meta itemprop="image" content="images/tild6463-3230-4134-a639-386635623431__0_qr5iotinrgvfc8rb.jpg"></div></div><div class="t1000__header t-col t-col_5"><div class="t-section__topwrapper t-align_left"><div class="t-section__title t-title t-title_xs" field="btitle">Computer vision</div><div class="t-section__descr t-descr t-descr_xl" field="bdescr">Наши технологии компьютерного зрения применяются в самых разных отраслях и помогают решать задачи, такие как:</div></div></div><ul role="list" class="t1000__features t-col t-col_5"><li class="t1000__feature t-item"
+><div class="t1000__iconwrapper"><svg role="presentation" class="t1000__feature-icon" imgfield="li_img__3193385906150" style="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 32C24.8365 32 32 24.8365 32 16C32 7.16345 24.8365 0 16 0C7.16345 0 0 7.16345 0 16C0 24.8365 7.16345 32 16 32ZM25.9882 12.0673L24.0118 9.93271L14.2 19.0177L7.98823 13.2661L6.01177 15.4006L14.2 22.9823L25.9882 12.0673Z" fill="#1f5bff" /></svg></div><div class="t1000__textwrapper" style=""><div class="t-descr t-descr_sm" field="li_descr__3193385906150"><strong>Промышленное зрение</strong>: автоматизация контроля качества, мониторинг производственных линий, обнаружение дефектов и автоматическая сортировка продукции.</div></div></li><li class="t1000__feature t-item"
+><div class="t1000__iconwrapper"><svg role="presentation" class="t1000__feature-icon" imgfield="li_img__3193385906151" style="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 32C24.8365 32 32 24.8365 32 16C32 7.16345 24.8365 0 16 0C7.16345 0 0 7.16345 0 16C0 24.8365 7.16345 32 16 32ZM25.9882 12.0673L24.0118 9.93271L14.2 19.0177L7.98823 13.2661L6.01177 15.4006L14.2 22.9823L25.9882 12.0673Z" fill="#1f5bff" /></svg></div><div class="t1000__textwrapper" style=""><div class="t-descr t-descr_sm" field="li_descr__3193385906151"><strong>Безопасность и наблюдение</strong>: распознавание лиц, мониторинг и анализ видеопотоков для обеспечения безопасности на объектах.</div></div></li><li class="t1000__feature t-item"
+><div class="t1000__iconwrapper"><svg role="presentation" class="t1000__feature-icon" imgfield="li_img__3193385906152" style="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 32C24.8365 32 32 24.8365 32 16C32 7.16345 24.8365 0 16 0C7.16345 0 0 7.16345 0 16C0 24.8365 7.16345 32 16 32ZM25.9882 12.0673L24.0118 9.93271L14.2 19.0177L7.98823 13.2661L6.01177 15.4006L14.2 22.9823L25.9882 12.0673Z" fill="#1f5bff" /></svg></div><div class="t1000__textwrapper" style=""><div class="t-descr t-descr_sm" field="li_descr__3193385906152"><strong>Здравоохранение</strong>: анализ медицинских изображений для диагностики и мониторинга состояний здоровья, автоматическая классификация медицинских данных.</div></div></li><li class="t1000__feature t-item"
+><div class="t1000__iconwrapper"><svg role="presentation" class="t1000__feature-icon" imgfield="li_img__1715575816396" style="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 32C24.8365 32 32 24.8365 32 16C32 7.16345 24.8365 0 16 0C7.16345 0 0 7.16345 0 16C0 24.8365 7.16345 32 16 32ZM25.9882 12.0673L24.0118 9.93271L14.2 19.0177L7.98823 13.2661L6.01177 15.4006L14.2 22.9823L25.9882 12.0673Z" fill="#1f5bff" /></svg></div><div class="t1000__textwrapper" style=""><div class="t-descr t-descr_sm" field="li_descr__1715575816396"><strong>Ритейл</strong>: анализ покупательского поведения, управление запасами и оптимизация витрин в реальном времени.</div></div></li></ul><div class="t-col t-col_5 t-align_left"><a href="#rec747347689" target="" class="t1000__button t1000__playbutton t1000__textbtn t-btntext " style="color:#1f5bff; " data-buttonfieldset="button"
+><div class="t1000__btn-text" data-field="buttontitle">Подробнее</div></a></div></div><div class="t1000__empty-block t1000__col t-col"></div></div></div><script>t_onReady(function () {
+t_onFuncLoad('t1000_init', function () {
+t1000_init('747344545', '270');
+});
+});</script></div><div id="rec747347689" class="r t-rec t-rec_pt_45 t-rec_pb_45" style="padding-top:45px;padding-bottom:45px; " data-record-type="127" ><!-- T119 --><div class="t119"><div class="t-container "><div class="t-col t-col_8 t-prefix_2"><div class="t119__preface t-descr" field="text">Разработка решений компьютерного зрения позволяет значительно повысить точность и скорость обработки визуальной информации, сократить затраты и увеличить общую производительность предприятия</div></div></div></div><style> #rec747347689 .t119__preface { opacity: 0.7; }</style></div><div id="rec747328472" class="r t-rec t-rec_pb_60" style="padding-bottom:60px;background-color:#111111; " data-animationappear="off" data-record-type="389" data-bg-color="#111111"><!-- T389 --><div class="t389" id="t-footer_747328472"><div class="t389__maincontainer" style="height: 70px;"><div class="t389__content"><div class="t389__col t389__col_hiddenmobile"><div class="t389__typo t389__copyright t-name t-name_xs" field="text">© 2024 NEIROSET.KZ</div></div><div class="t389__col t389__col_center t-align_center"><div class="t389__centercontainer"><ul class="t389__list"><li class="t389__list_item t-name t-name_xs"><a class="t389__typo" href="/main" data-menu-item-number="1">Главная</a></li><li class="t389__list_item t-name t-name_xs"><a class="t389__typo" href="/projects" data-menu-item-number="2">Проекты</a></li><li class="t389__list_item t-name t-name_xs"><a class="t389__typo" href="/contacts" data-menu-item-number="3">Контакты</a></li></ul></div></div><div class="t389__col t389__col_mobile"><div class="t389__typo t389__copyright t-name t-name_xs" field="text">© 2024 NEIROSET.KZ</div></div><div class="t389__col"><div class="t389__scroll t-align_right"><a class="t389__typo t-name t-name_xs t389_scrolltop" href="javascript:t389_scrollToTop();">НАВЕРХ<span class="t389__icon"><svg role="presentation" width="5" height="17" viewBox="0 0 6 20"><path fill="#ffffff" d="M5.78 3.85L3.12.28c-.14-.14-.3-.14-.43 0L.03 3.85c-.14.13-.08.27.13.27h1.72V20h2.06V4.12h1.72c.15 0 .22-.07.19-.17a.26.26 0 00-.07-.1z" fill-rule="evenodd"/></svg></span></a></div></div></div></div></div><style>#rec747328472 .t389__copyright, #rec747328472 .t389_scrolltop, #rec747328472 .t389__list_item a {
+color: #ffffff;
+}</style></div></div><!--/allrecords-->
